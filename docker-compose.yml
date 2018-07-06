@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+   server:
+     build: /home/mamane/NouveauGc/WebGC-Server
+     image: server:1
+     volumes:
+        - /app
+     ports:
+        - 1112:8080
+   client:
+     build: /home/mamane/NouveauGc/WebGC
+     image:  client:1
+     volumes:
+         - /app
+     ports:
+        - ?
+   
